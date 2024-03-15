@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kalender.CreateEventPage"
+             Title="EventPage">
+    <VerticalStackLayout>
+        <Image
+            Source="kalender.png"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Kalender picture" />
+            <Label 
+            Text="Kalenderhändelse: "/>
+            <Entry
+                x:Name="MyInputTask"
+                Placeholder="Skriv in en händelse: "/>
+            <Label 
+            Text="Beskrivning: "/>
+            <Entry
+                x:Name="MyInputDescription"
+                Placeholder="Ange en beskrivning: "/>
+        
+            <DatePicker x:Name="MyDatePicker" 
+                        Format="yyyy-MM-dd" />
+
+        <Label
+            Text="Upprepas?"/>
+        
+        <CheckBox x:Name="RecurringCheckBox"
+                  CheckedChanged="OnRecurringCheckBoxChecked"/>
+
+        <Picker x:Name="RecurrencePicker"
+                Title="Frekvensväljare"
+                IsVisible="False">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Dagar</x:String>
+                    <x:String>Veckor</x:String>
+                    <x:String>Månader</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        
+        <Entry x:Name="NumberOfEventsEntry" 
+               Placeholder="Hur många gånger ska händelsen upprepas"
+               IsVisible="False" 
+               Keyboard="Numeric"/>
+        
+        <Entry x:Name="NumberEntry" 
+               Placeholder="Hur ofta ska händelsen upprepas?"
+               IsVisible="False" 
+               Keyboard="Numeric"/>
+
+        <Button
+                     x:Name="Registration"
+                     Text="Lägg till kalenderhändelse"
+                     Clicked="ClickedMakeTask"
+                     HorizontalOptions="Fill"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kalender.Registered"
+             Title="Registered">
+    <VerticalStackLayout>
+        <Image
+    Source="kalender.png"
+    HeightRequest="185"
+    Aspect="AspectFit"
+    SemanticProperties.Description="Kalender picture" />
+        <Label 
+    Text="Välkommen till registreringen"
+    VerticalOptions="Center" 
+    HorizontalOptions="Center" />
+
+        <Label 
+    Text="Användarnamn: "/>
+        <Entry
+        x:Name="MyInputName"
+        Placeholder="Skriv in ett användarnamn: "/>
+        <Label 
+    Text="Lösenord: "/>
+        <Entry
+        x:Name="MyInputPassword"
+        Placeholder="Skriv in ett Lösenord: "/>
+        <Label 
+    Text="Email: "/>
+        <Entry
+        x:Name="MyInputEmail"
+        Placeholder="Skriv in din email: "/>
+        
+        <Label
+        Text="Ange hemstad: "/>
+        <Entry
+        x:Name="MyInputCity"
+        Placeholder="Skriv in hemstad: "/>
+
+        <Button
+             x:Name="Registration"
+             Text="Skapa konto"
+             Clicked="ClickedRegistationCheck"
+             HorizontalOptions="Fill"/>
+
+    </VerticalStackLayout>
+</ContentPage>
