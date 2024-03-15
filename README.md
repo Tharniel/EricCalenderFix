@@ -1,2 +1,4 @@
 # EricCalenderFix
-EricCalender reuploaded
+EricCalender reuploaded with gitignore correctly setup.
+Original: https://github.com/Tharniel/EricCalender
+
